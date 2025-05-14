@@ -1,0 +1,15 @@
+Executive summary
+Assignment overview
+This assignment is to write a server program which will serve as a key value store. The server is set up to store 5 key-value pairs in the form of “key1 value1” etc. The client will enter PUT (key,value), GET(key), DELETE(key) and GETALL command in the terminal. This project is to practice using TCP and UDP to connect client to server and the server will listen to the client command and response. 
+
+Technical impression
+The client log showed “server time out” when I entered command in the terminal, the reason is the server did not send and “END” message after receiving command. I fixed this by modifying the client to stop reading when it receives the “END” message from the server.
+
+How to run:
+Comply the server first: locate to the src file, for example: PS C:\Users\HP\Desktop\project1\src>
+Comply the server: javac TCPServer1.java
+Set the host: java TCPServer1 1234, you should see connect from the terminal
+Comply the client, for example: javac TCPClient1.java
+Run the client: java TCPClient1 localhost 1234
+When see the prompt, enter command, for example: GETALL to see all the key-value pairs
+
